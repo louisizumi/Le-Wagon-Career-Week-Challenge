@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid black; */
+  font-family: sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Hide scrollbars */
+* {
+  -ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+/* Hide ALL scrollbars */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+i {
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #21212b;
+}
+
+.radio {
+  border-radius: 16px;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 280px;
+}
+
+.radio__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 16px 16px 0 0;
+  padding: 0 16px;
+  height: 64px;
+  background-color: #edae62;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+.icon-container:hover {
+  background-color: rgba(159, 116, 65, 0.5);
+  box-shadow: 0 0 4px 4px rgba(159, 116, 65, 0.5);
+}
+
+.radio__body {
+  overflow-y: scroll;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  max-height: 360px;
+  background-color: #30303a;
+}
+
+.radio__station {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 16px;
+  padding: 16px 0;
+}
+
+.radio__station:not(.accordion:first-child .radio__station) {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.accordion {
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+.accordion:hover {
+  background-color: #22222a;
+  cursor: pointer;
+}
+
+.panel {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+.panel__contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 16px;
+  padding: 16px 0;
+}
+
+.panel__contents img {
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  width: 160px;
+}
+
+.radio__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 16px 16px;
+  height: 64px;
+  background-color: #22222a;
+  text-align: center;
+}
+
+.now-playing {
+  padding-bottom: 4px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #dab16f;
+}
